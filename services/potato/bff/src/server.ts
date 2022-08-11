@@ -1,24 +1,28 @@
-import { createHTTPServer } from "@trpc/server/adapters/standalone";
-import { Server } from "ws";
-import { applyWSSHandler } from "@trpc/server/adapters/ws";
-import { router, Router } from "./router";
+import { createExpressMiddleware } from "@trpc/server/adapters/express";
+import express from "express";
+import cors from "cors";
 
-// http server
-const { server, listen } = createHTTPServer({
-  router,
-  createContext() {
-    return {};
-  },
+import { createContext } from "./context";
+import { router } from "./router";
+
+const PORT = 8081;
+
+const app = express();
+
+app.use(cors());
+
+app.use("/healthcheck", (_, res) => {
+  res.json({ success: true });
 });
 
-// ws server
-const wss = new Server({ server });
-applyWSSHandler<Router>({
-  wss,
-  router,
-  createContext() {
-    return {};
-  },
-});
+app.use(
+  "/trpc",
+  createExpressMiddleware({
+    router,
+    createContext,
+  })
+);
 
-listen(2022);
+app.listen(PORT, () => {
+  console.log(`App listening on port: ${PORT}`);
+});

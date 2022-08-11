@@ -1,21 +1,41 @@
-import * as trpc from "@trpc/server";
+import { initTRPC } from "@trpc/server";
 import { z } from "zod";
 
-export const router = trpc
-  .router()
-  .query("getUser", {
-    input: z.object({
-      id: z.string().min(5),
+import { Context } from "./context";
+
+const t = initTRPC<{ ctx: Context }>()();
+
+const userRouter = t.router({
+  greeting: t.procedure
+    .input(
+      z.object({
+        name: z.string(),
+      })
+    )
+    .query(({ input }) => `Hello, ${input.name}!`),
+});
+
+const messageRouter = t.router({
+  createMessage: t.procedure
+    .input(
+      z.object({
+        title: z.string(),
+        text: z.string(),
+      })
+    )
+    .mutation(({ input }) => {
+      // imagine db call here
+      return {
+        id: `${Math.random()}`,
+        ...input,
+      };
     }),
-    async resolve(req) {
-      return { id: req.input, name: "Bilbo" };
-    },
-  })
-  .mutation("createUser", {
-    input: z.object({ name: z.string().min(5) }),
-    async resolve(req) {
-      console.log("input", req.input);
-    },
-  });
+});
+
+// Merge routers together
+export const router = t.router({
+  user: userRouter,
+  message: messageRouter,
+});
 
 export type Router = typeof router;
