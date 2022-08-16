@@ -2,6 +2,21 @@ lockfileVersion: 5.4
 
 importers:
 
+  packages/micro-frontend:
+    specifiers:
+      '@types/react': ^18.0.15
+      '@types/react-dom': ^18.0.6
+      react: ^18.2.0
+      react-dom: ^18.2.0
+      typescript: ^4.7.4
+    optionalDependencies:
+      react: 18.2.0
+      react-dom: 18.2.0_react@18.2.0
+    devDependencies:
+      '@types/react': 18.0.17
+      '@types/react-dom': 18.0.6
+      typescript: 4.7.4
+
   services/potato/bff:
     specifiers:
       '@trpc/server': 10.0.0-alpha.45
@@ -31,12 +46,16 @@ importers:
 
   services/potato/ui:
     specifiers:
+      '@babel/core': ^7.18.10
+      '@babel/plugin-proposal-class-properties': ^7.18.6
+      '@babel/plugin-proposal-decorators': ^7.18.10
       '@tanstack/react-query': ^4.1.0
       '@trpc/client': 10.0.0-alpha.45
       '@trpc/react': 10.0.0-alpha.45
       '@trpc/server': 10.0.0-alpha.45
       '@types/react': ^18.0.15
       '@types/react-dom': ^18.0.6
+      '@valendres/micro-frontend': workspace:^
       '@valendres/potato-bff': workspace:^
       '@vanilla-extract/css': ^1.7.2
       '@vanilla-extract/vite-plugin': ^3.3.0
@@ -52,10 +71,14 @@ importers:
       '@trpc/client': 10.0.0-alpha.45_ryw3a7dmma64dr5mcs3hufw5vm
       '@trpc/react': 10.0.0-alpha.45_seajrchn4esxsytkkkawuxklhm
       '@trpc/server': 10.0.0-alpha.45
+      '@valendres/micro-frontend': link:../../../packages/micro-frontend
       react: 18.2.0
       react-dom: 18.2.0_react@18.2.0
       web-vitals: 2.1.4
     devDependencies:
+      '@babel/core': 7.18.10
+      '@babel/plugin-proposal-class-properties': 7.18.6_@babel+core@7.18.10
+      '@babel/plugin-proposal-decorators': 7.18.10_@babel+core@7.18.10
       '@types/react': 18.0.17
       '@types/react-dom': 18.0.6
       '@valendres/potato-bff': link:../bff
@@ -140,6 +163,24 @@ packages:
       semver: 6.3.0
     dev: true
 
+  /@babel/helper-create-class-features-plugin/7.18.9_@babel+core@7.18.10:
+    resolution: {integrity: sha512-WvypNAYaVh23QcjpMR24CwZY2Nz6hqdOcFdPbNpV56hL5H6KiFheO7Xm1aPdlLQ7d5emYZX7VZwPp9x3z+2opw==}
+    engines: {node: '>=6.9.0'}
+    peerDependencies:
+      '@babel/core': ^7.0.0
+    dependencies:
+      '@babel/core': 7.18.10
+      '@babel/helper-annotate-as-pure': 7.18.6
+      '@babel/helper-environment-visitor': 7.18.9
+      '@babel/helper-function-name': 7.18.9
+      '@babel/helper-member-expression-to-functions': 7.18.9
+      '@babel/helper-optimise-call-expression': 7.18.6
+      '@babel/helper-replace-supers': 7.18.9
+      '@babel/helper-split-export-declaration': 7.18.6
+    transitivePeerDependencies:
+      - supports-color
+    dev: true
+
   /@babel/helper-environment-visitor/7.18.9:
     resolution: {integrity: sha512-3r/aACDJ3fhQ/EVgFy0hpj8oHyHpQc+LPtJoY9SzTThAsStm4Ptegq92vqKoE3vD706ZVFWITnMnxucw+S9Ipg==}
     engines: {node: '>=6.9.0'}
@@ -155,6 +196,13 @@ packages:
 
   /@babel/helper-hoist-variables/7.18.6:
     resolution: {integrity: sha512-UlJQPkFqFULIcyW5sbzgbkxn2FKRgwWiRexcuaR8RNJRy8+LLveqPjwZV/bwrLZCN0eUHD/x8D0heK1ozuoo6Q==}
+    engines: {node: '>=6.9.0'}
+    dependencies:
+      '@babel/types': 7.18.10
+    dev: true
+
+  /@babel/helper-member-expression-to-functions/7.18.9:
+    resolution: {integrity: sha512-RxifAh2ZoVU67PyKIO4AMi1wTenGfMR/O/ae0CCRqwgBAt5v7xjdtRw7UoSbsreKrQn5t7r89eruK/9JjYHuDg==}
     engines: {node: '>=6.9.0'}
     dependencies:
       '@babel/types': 7.18.10
@@ -183,9 +231,29 @@ packages:
       - supports-color
     dev: true
 
+  /@babel/helper-optimise-call-expression/7.18.6:
+    resolution: {integrity: sha512-HP59oD9/fEHQkdcbgFCnbmgH5vIQTJbxh2yf+CdM89/glUNnuzr87Q8GIjGEnOktTROemO0Pe0iPAYbqZuOUiA==}
+    engines: {node: '>=6.9.0'}
+    dependencies:
+      '@babel/types': 7.18.10
+    dev: true
+
   /@babel/helper-plugin-utils/7.18.9:
     resolution: {integrity: sha512-aBXPT3bmtLryXaoJLyYPXPlSD4p1ld9aYeR+sJNOZjJJGiOpb+fKfh3NkcCu7J54nUJwCERPBExCCpyCOHnu/w==}
     engines: {node: '>=6.9.0'}
+    dev: true
+
+  /@babel/helper-replace-supers/7.18.9:
+    resolution: {integrity: sha512-dNsWibVI4lNT6HiuOIBr1oyxo40HvIVmbwPUm3XZ7wMh4k2WxrxTqZwSqw/eEmXDS9np0ey5M2bz9tBmO9c+YQ==}
+    engines: {node: '>=6.9.0'}
+    dependencies:
+      '@babel/helper-environment-visitor': 7.18.9
+      '@babel/helper-member-expression-to-functions': 7.18.9
+      '@babel/helper-optimise-call-expression': 7.18.6
+      '@babel/traverse': 7.18.11
+      '@babel/types': 7.18.10
+    transitivePeerDependencies:
+      - supports-color
     dev: true
 
   /@babel/helper-simple-access/7.18.6:
@@ -243,6 +311,45 @@ packages:
     hasBin: true
     dependencies:
       '@babel/types': 7.18.10
+    dev: true
+
+  /@babel/plugin-proposal-class-properties/7.18.6_@babel+core@7.18.10:
+    resolution: {integrity: sha512-cumfXOF0+nzZrrN8Rf0t7M+tF6sZc7vhQwYQck9q1/5w2OExlD+b4v4RpMJFaV1Z7WcDRgO6FqvxqxGlwo+RHQ==}
+    engines: {node: '>=6.9.0'}
+    peerDependencies:
+      '@babel/core': ^7.0.0-0
+    dependencies:
+      '@babel/core': 7.18.10
+      '@babel/helper-create-class-features-plugin': 7.18.9_@babel+core@7.18.10
+      '@babel/helper-plugin-utils': 7.18.9
+    transitivePeerDependencies:
+      - supports-color
+    dev: true
+
+  /@babel/plugin-proposal-decorators/7.18.10_@babel+core@7.18.10:
+    resolution: {integrity: sha512-wdGTwWF5QtpTY/gbBtQLAiCnoxfD4qMbN87NYZle1dOZ9Os8Y6zXcKrIaOU8W+TIvFUWVGG9tUgNww3CjXRVVw==}
+    engines: {node: '>=6.9.0'}
+    peerDependencies:
+      '@babel/core': ^7.0.0-0
+    dependencies:
+      '@babel/core': 7.18.10
+      '@babel/helper-create-class-features-plugin': 7.18.9_@babel+core@7.18.10
+      '@babel/helper-plugin-utils': 7.18.9
+      '@babel/helper-replace-supers': 7.18.9
+      '@babel/helper-split-export-declaration': 7.18.6
+      '@babel/plugin-syntax-decorators': 7.18.6_@babel+core@7.18.10
+    transitivePeerDependencies:
+      - supports-color
+    dev: true
+
+  /@babel/plugin-syntax-decorators/7.18.6_@babel+core@7.18.10:
+    resolution: {integrity: sha512-fqyLgjcxf/1yhyZ6A+yo1u9gJ7eleFQod2lkaUsF9DQ7sbbY3Ligym3L0+I2c0WmqNKDpoD9UTb1AKP3qRMOAQ==}
+    engines: {node: '>=6.9.0'}
+    peerDependencies:
+      '@babel/core': ^7.0.0-0
+    dependencies:
+      '@babel/core': 7.18.10
+      '@babel/helper-plugin-utils': 7.18.9
     dev: true
 
   /@babel/plugin-syntax-jsx/7.18.6_@babel+core@7.18.10:

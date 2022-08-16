@@ -7,8 +7,10 @@
     "module": "esnext",
     "target": "es6",
     "allowJs": true,
+    "experimentalDecorators": true,
     "paths": {
       "~utils/*": ["src/utils/*"]
     }
-  }
+  },
+  "references": [{ "path": "../../../packages/micro-frontend" }]
 }

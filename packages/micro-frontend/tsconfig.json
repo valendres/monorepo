@@ -1,0 +1,10 @@
+{
+  "compilerOptions": {
+    "lib": ["ESNext", "DOM", "DOM.Iterable"],
+    "baseUrl": "./",
+    "composite": true,
+    "rootDir": "src",
+    "outDir": "./dist"
+  },
+  "include": ["src"]
+}
