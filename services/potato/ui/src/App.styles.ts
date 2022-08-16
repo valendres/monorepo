@@ -1,21 +1,21 @@
-import { style, keyframes } from "@vanilla-extract/css";
+import { css, keyframes } from "@emotion/react";
 
 const rotate = keyframes({
   "0%": { transform: "rotate(0deg)" },
   "100%": { transform: "rotate(360deg)" },
 });
 
-export const spin = style({});
+export const spin = css({});
 
-export const app = style({
+export const app = css({
   textAlign: "center",
 });
 
-export const logo = style({
+export const logo = css({
   animation: `${rotate} infinite 20s linear`,
 });
 
-export const header = style({
+export const header = css({
   backgroundColor: "#282c34",
   minHeight: "100vh",
   display: "flex",
@@ -26,6 +26,6 @@ export const header = style({
   color: "white",
 });
 
-export const link = style({
+export const link = css({
   color: "#61dafb",
 });

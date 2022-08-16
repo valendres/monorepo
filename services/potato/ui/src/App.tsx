@@ -1,5 +1,5 @@
 import logo from "./logo.svg";
-import * as styles from "./App.css";
+import * as styles from "./App.styles";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { FC, useState } from "react";
 import { trpc } from "~utils/trpc";
@@ -22,9 +22,9 @@ export const App: FC = () => {
   return (
     <trpc.Provider client={trpcClient} queryClient={queryClient}>
       <QueryClientProvider client={queryClient}>
-        <div className={styles.app}>
-          <header className={styles.header}>
-            <img className={styles.logo} src={logo} alt="logo" />
+        <div css={styles.app}>
+          <header css={styles.header}>
+            <img css={styles.logo} src={logo} alt="logo" />
             <h3>
               <Welcome />
             </h3>

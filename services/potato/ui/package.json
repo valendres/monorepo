@@ -11,6 +11,8 @@
     "start": "vite"
   },
   "dependencies": {
+    "@emotion/css": "^11.10.0",
+    "@emotion/react": "^11.10.0",
     "@tanstack/react-query": "^4.1.0",
     "@trpc/client": "10.0.0-alpha.45",
     "@trpc/react": "10.0.0-alpha.45",
@@ -21,11 +23,11 @@
     "web-vitals": "^2.1.4"
   },
   "devDependencies": {
+    "@babel/core": "^7.18.10",
+    "@emotion/babel-plugin": "^11.10.0",
     "@types/react": "^18.0.15",
     "@types/react-dom": "^18.0.6",
     "@valendres/potato-bff": "workspace:^",
-    "@vanilla-extract/css": "^1.7.2",
-    "@vanilla-extract/vite-plugin": "^3.3.0",
     "@vitejs/plugin-react": "^2.0.0",
     "react-refresh": "^0.10.0",
     "typescript": "^4.7.4",
