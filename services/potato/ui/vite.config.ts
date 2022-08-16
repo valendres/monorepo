@@ -17,15 +17,5 @@ export default defineConfig({
       "~utils": sourcePath("utils"),
     },
   },
-  plugins: [
-    react({
-      babel: {
-        plugins: [
-          ["@babel/plugin-proposal-decorators", { legacy: true }],
-          ["@babel/plugin-proposal-class-properties", { loose: true }],
-        ],
-      },
-    }),
-    vanillaExtractPlugin(),
-  ],
+  plugins: [react(), vanillaExtractPlugin()],
 });
