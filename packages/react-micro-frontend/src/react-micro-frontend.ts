@@ -1,14 +1,11 @@
 import { createRoot, Root } from "react-dom/client";
 
+import { loadFont, Font } from "./utils/font";
+
 export type ReactMicroFrontendConfig = {
   shadow?: boolean;
   styles?: string[];
-  fonts?: Array<{
-    rel: "preconnect" | "stylesheet";
-    href: string;
-    /** https://developer.mozilla.org/en-US/docs/Web/HTML/Attributes/crossorigin */
-    crossOrigin?: "anonymous" | "use-credentials";
-  }>;
+  fonts?: Font[];
 };
 
 export class ReactMicroFrontend extends HTMLElement {
@@ -62,21 +59,7 @@ export class ReactMicroFrontend extends HTMLElement {
   }
 
   loadFonts(): void {
-    this.config?.fonts.map(({ rel, href, crossOrigin }) => {
-      // Prevent adding duplicate links to document head
-      if (document.querySelector(`link[rel="${rel}"][href="${href}"]`)) {
-        return;
-      }
-
-      const element = document.createElement("link");
-      element.rel = rel;
-      element.href = href;
-      element.dataset.injected = "true";
-      if (crossOrigin) {
-        element.crossOrigin = "";
-      }
-      document.head.appendChild(element);
-    });
+    this.config?.fonts?.map((font) => loadFont(font));
   }
 
   render(): void {}
