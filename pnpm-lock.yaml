@@ -37,7 +37,7 @@ importers:
       '@trpc/server': 10.0.0-alpha.45
       '@types/react': ^18.0.15
       '@types/react-dom': ^18.0.6
-      '@valendres-monorepo/potato-bff': workspace:^
+      '@valendres/potato-bff': workspace:^
       '@vanilla-extract/css': ^1.7.2
       '@vanilla-extract/vite-plugin': ^3.3.0
       '@vitejs/plugin-react': ^2.0.0
@@ -58,7 +58,7 @@ importers:
     devDependencies:
       '@types/react': 18.0.17
       '@types/react-dom': 18.0.6
-      '@valendres-monorepo/potato-bff': link:../bff
+      '@valendres/potato-bff': link:../bff
       '@vanilla-extract/css': 1.7.2
       '@vanilla-extract/vite-plugin': 3.3.0_vite@3.0.5
       '@vitejs/plugin-react': 2.0.0_vite@3.0.5

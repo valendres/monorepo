@@ -1,5 +1,5 @@
 {
-  "name": "@valendres-monorepo/potato-bff",
+  "name": "@valendres/potato-bff",
   "version": "1.0.0",
   "main": "src/index.ts",
   "scripts": {
