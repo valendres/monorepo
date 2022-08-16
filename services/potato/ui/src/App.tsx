@@ -1,5 +1,7 @@
+import { CacheProvider, css } from "@emotion/react";
 import logo from "./logo.svg";
 import * as styles from "./App.styles";
+import createCache from "@emotion/cache";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { FC, useState } from "react";
 import { trpc } from "~utils/trpc";

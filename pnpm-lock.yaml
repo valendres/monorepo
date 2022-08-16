@@ -48,6 +48,7 @@ importers:
     specifiers:
       '@babel/core': ^7.18.10
       '@emotion/babel-plugin': ^11.10.0
+      '@emotion/cache': ^11.10.1
       '@emotion/css': ^11.10.0
       '@emotion/react': ^11.10.0
       '@tanstack/react-query': ^4.1.0
@@ -66,6 +67,7 @@ importers:
       vite: ^3.0.0
       web-vitals: ^2.1.4
     dependencies:
+      '@emotion/cache': 11.10.1
       '@emotion/css': 11.10.0_@babel+core@7.18.10
       '@emotion/react': 11.10.0_msmmgljd7hl2w2irtggflhmema
       '@tanstack/react-query': 4.1.0_biqbaboplfbrettd7655fr4n2y
