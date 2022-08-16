@@ -1,13 +1,13 @@
 import type { ReactNode } from "react";
-import { ReactMicroFrontend } from "./react-micro-frontend";
+import {
+  ReactMicroFrontend,
+  ReactMicroFrontendConfig,
+} from "./react-micro-frontend";
 
 export const defineReactMicroFrontend = <TProps = {}>(
   tag: string,
   renderApp: (props: TProps, element: ReactMicroFrontend) => ReactNode,
-  config?: {
-    shadow?: boolean;
-    styles?: string[];
-  }
+  config?: ReactMicroFrontendConfig
 ) => {
   class GeneratedReactMicroFrontend extends ReactMicroFrontend {
     constructor() {

@@ -1,6 +1,7 @@
 import { StrictMode } from "react";
-import { App } from "./App";
 import { defineReactMicroFrontend } from "@valendres/react-micro-frontend";
+
+import { App } from "./App";
 import styles from "./styles.scss?inline";
 
 defineReactMicroFrontend(
@@ -15,5 +16,20 @@ defineReactMicroFrontend(
   {
     shadow: true,
     styles: [styles],
+    fonts: [
+      {
+        rel: "preconnect",
+        href: "https://fonts.googleapis.com",
+      },
+      {
+        rel: "preconnect",
+        href: "https://fonts.gstatic.com",
+        crossOrigin: "anonymous",
+      },
+      {
+        rel: "stylesheet",
+        href: "https://fonts.googleapis.com/css2?family=Roboto&display=swap",
+      },
+    ],
   }
 );
