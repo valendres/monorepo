@@ -1,10 +1,11 @@
 import { createRoot, Root } from "react-dom/client";
 
 import { loadFont, Font } from "./utils/font";
+import { loadStyle, Style } from "./utils/style";
 
 export type ReactMicroFrontendConfig = {
   shadow?: boolean;
-  styles?: string[];
+  styles?: Style[];
   fonts?: Font[];
 };
 
@@ -37,29 +38,19 @@ export class ReactMicroFrontend extends HTMLElement {
       this.attachShadow({ mode: "open" });
     }
 
-    this.loadFonts();
-    this.createReactRoot();
-    this.injectStyles();
-    this.render();
-  }
+    // Load fonts
+    this.config?.fonts?.map((font) => loadFont(font));
 
-  createReactRoot(): void {
+    // Load styles
+    this.config?.styles?.map((style) => loadStyle(style, this.dynamicRoot));
+
+    // Create react root
     const element = document.createElement("div");
     this.reactRoot = createRoot(element);
     this.dynamicRoot.appendChild(element);
-  }
 
-  injectStyles(): void {
-    this.config?.styles.map((style) => {
-      const element = document.createElement("style");
-      element.dataset.injected = "true";
-      element.innerHTML = style;
-      this.dynamicRoot.appendChild(element);
-    });
-  }
-
-  loadFonts(): void {
-    this.config?.fonts?.map((font) => loadFont(font));
+    // Render app for first time
+    this.render();
   }
 
   render(): void {}
