@@ -1,28 +1,35 @@
 import { StrictMode } from "react";
-import { createRoot, Root } from "react-dom/client";
+import { defineReactMicroFrontend } from "@valendres/react-micro-frontend";
+
 import { App } from "./App";
-import "./global.css";
+import styles from "./styles.scss?inline";
 
-class PotatoMicroFrontend extends HTMLElement {
-  private reactRootElement: HTMLElement;
-  private reactRoot: Root;
-
-  constructor() {
-    super();
-    // Render react root
-    this.reactRootElement = document.createElement("div");
-    this.reactRoot = createRoot(this.reactRootElement);
-    this.reactRoot.render(
+defineReactMicroFrontend(
+  "potato-micro-frontend",
+  (_, element) => {
+    return (
       <StrictMode>
-        <App />
+        <App container={element.shadowRoot} />
       </StrictMode>
     );
-
-    // Attach react root
-    // this.attachShadow({ mode: "open" });
-    // this.shadowRoot.appendChild(this.reactRootElement);
-    this.appendChild(this.reactRootElement);
+  },
+  {
+    shadow: true,
+    styles: [styles],
+    fonts: [
+      {
+        rel: "preconnect",
+        href: "https://fonts.googleapis.com",
+      },
+      {
+        rel: "preconnect",
+        href: "https://fonts.gstatic.com",
+        crossOrigin: "anonymous",
+      },
+      {
+        rel: "stylesheet",
+        href: "https://fonts.googleapis.com/css2?family=Roboto&display=swap",
+      },
+    ],
   }
-}
-
-customElements.define("potato-micro-frontend", PotatoMicroFrontend);
+);

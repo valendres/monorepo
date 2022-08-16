@@ -2,6 +2,7 @@
   "compilerOptions": {
     "baseUrl": "./",
     "jsx": "react-jsx",
+    "jsxImportSource": "@emotion/react",
     "lib": ["ESNext", "DOM", "DOM.Iterable"],
     "moduleResolution": "node",
     "module": "esnext",
@@ -10,5 +11,6 @@
     "paths": {
       "~utils/*": ["src/utils/*"]
     }
-  }
+  },
+  "references": [{ "path": "../../../packages/react-micro-frontend" }]
 }
