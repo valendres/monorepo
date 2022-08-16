@@ -9,7 +9,7 @@ import { loadFont } from "./utils/font";
 export const defineReactMicroFrontend = <TProps = {}>(
   tag: string,
   renderApp: (props: TProps, element: ReactMicroFrontend) => ReactNode,
-  config?: ReactMicroFrontendConfig
+  config: ReactMicroFrontendConfig = {}
 ) => {
   const { fonts, ...configWithoutFonts } = config;
 
