@@ -7,4 +7,4 @@
 - [React Query](https://tanstack.com/query/v4): async state management
 - [Zod](https://zod.dev/): Typescript First Schema Validation
 - [tRPC](https://trpc.io/): End-to-end typesafe API
-- [Vanilla Extract](https://vanilla-extract.style/): CSS-in-JS
+- [Emotion](https://emotion.sh/): CSS-in-JS
