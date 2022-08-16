@@ -31,6 +31,7 @@
     "@valendres/potato-bff": "workspace:^",
     "@vitejs/plugin-react": "^2.0.0",
     "react-refresh": "^0.10.0",
+    "sass": "^1.54.4",
     "typescript": "^4.7.4",
     "vite": "^3.0.0"
   }

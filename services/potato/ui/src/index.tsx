@@ -1,7 +1,7 @@
 import { StrictMode } from "react";
 import { App } from "./App";
 import { defineReactMicroFrontend } from "@valendres/react-micro-frontend";
-import "./global.styles";
+import styles from "./styles.scss?inline";
 
 defineReactMicroFrontend(
   "potato-micro-frontend",
@@ -14,5 +14,6 @@ defineReactMicroFrontend(
   },
   {
     shadow: true,
+    styles: [styles],
   }
 );

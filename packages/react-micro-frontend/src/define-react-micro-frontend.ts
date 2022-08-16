@@ -1,36 +1,17 @@
 import type { ReactNode } from "react";
-import { Root, createRoot } from "react-dom/client";
+import { ReactMicroFrontend } from "./react-micro-frontend";
 
 export const defineReactMicroFrontend = <TProps = {}>(
   tag: string,
-  renderApp: (props: TProps, element: HTMLElement) => ReactNode,
+  renderApp: (props: TProps, element: ReactMicroFrontend) => ReactNode,
   config?: {
     shadow?: boolean;
+    styles?: string[];
   }
 ) => {
-  class GeneratedReactMicroFrontend extends HTMLElement {
-    private reactRootElement: HTMLElement;
-    private reactRoot: Root;
-
-    public isInitialised = false;
-
-    connectedCallback() {
-      if (!this.isInitialised) {
-        this.initialise();
-      }
-    }
-
-    initialise(): void {
-      this.isInitialised = true;
-      this.reactRootElement = document.createElement("div");
-      this.reactRoot = createRoot(this.reactRootElement);
-      if (config?.shadow) {
-        this.attachShadow({ mode: "open" });
-        this.shadowRoot.appendChild(this.reactRootElement);
-      } else {
-        this.appendChild(this.reactRootElement);
-      }
-      this.render();
+  class GeneratedReactMicroFrontend extends ReactMicroFrontend {
+    constructor() {
+      super(config);
     }
 
     render() {

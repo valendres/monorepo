@@ -9,21 +9,6 @@ export const spin = css({});
 
 export const app = css({
   textAlign: "center",
-  fontFamily: [
-    "-apple-system",
-    "BlinkMacSystemFont",
-    "Segoe UI",
-    "Roboto",
-    "Oxygen",
-    "Ubuntu",
-    "Cantarell",
-    "Fira Sans",
-    "Droid Sans",
-    "Helvetica Neue",
-    "sans-serif",
-  ],
-  WebkitFontSmoothing: "antialiased",
-  MozOsxFontSmoothing: "grayscale",
 });
 
 export const logo = css({
@@ -38,7 +23,6 @@ export const header = css({
   alignItems: "center",
   justifyContent: "center",
   fontSize: "calc(10px + 2vmin)",
-  color: "white",
 });
 
 export const link = css({
