@@ -1,19 +1,27 @@
 import type { ReactNode } from "react";
-import { MicroFrontend } from "../micro-frontend";
 import { Root, createRoot } from "react-dom/client";
 
 export const defineReactMicroFrontend = (
   tag: string,
   renderApp: () => ReactNode
 ) => {
-  class GeneratedReactMicroFrontend extends MicroFrontend {
+  class GeneratedReactMicroFrontend extends HTMLElement {
     private reactRootElement: HTMLElement;
     private reactRoot: Root;
 
+    public isInitialised = false;
+
+    connectedCallback() {
+      if (!this.isInitialised) {
+        this.initialise();
+      }
+    }
+
     initialise(): void {
-      // Render react root
+      this.isInitialised = true;
       this.reactRootElement = document.createElement("div");
       this.reactRoot = createRoot(this.reactRootElement);
+      this.appendChild(this.reactRootElement);
       this.render();
     }
 

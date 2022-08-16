@@ -1,5 +1,5 @@
 {
-  "name": "@valendres/micro-frontend",
+  "name": "@valendres/react-micro-frontend",
   "main": "src/index.ts",
   "version": "1.0.0",
   "scripts": {

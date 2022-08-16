@@ -2,7 +2,7 @@ lockfileVersion: 5.4
 
 importers:
 
-  packages/micro-frontend:
+  packages/react-micro-frontend:
     specifiers:
       '@types/react': ^18.0.15
       '@types/react-dom': ^18.0.6
@@ -55,8 +55,8 @@ importers:
       '@trpc/server': 10.0.0-alpha.45
       '@types/react': ^18.0.15
       '@types/react-dom': ^18.0.6
-      '@valendres/micro-frontend': workspace:^
       '@valendres/potato-bff': workspace:^
+      '@valendres/react-micro-frontend': workspace:^
       '@vanilla-extract/css': ^1.7.2
       '@vanilla-extract/vite-plugin': ^3.3.0
       '@vitejs/plugin-react': ^2.0.0
@@ -71,7 +71,7 @@ importers:
       '@trpc/client': 10.0.0-alpha.45_ryw3a7dmma64dr5mcs3hufw5vm
       '@trpc/react': 10.0.0-alpha.45_seajrchn4esxsytkkkawuxklhm
       '@trpc/server': 10.0.0-alpha.45
-      '@valendres/micro-frontend': link:../../../packages/micro-frontend
+      '@valendres/react-micro-frontend': link:../../../packages/react-micro-frontend
       react: 18.2.0
       react-dom: 18.2.0_react@18.2.0
       web-vitals: 2.1.4
