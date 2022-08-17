@@ -1,7 +1,20 @@
 import { defineReactMicroFrontend } from "@valendres/react-micro-frontend";
 import { lazy, LazyExoticComponent } from "react";
+import { QueryClient } from "@tanstack/react-query";
 import { RootProvider } from "~containers/root-provider";
+import { trpc } from "~utils/trpc";
 import styles from "./styles.scss";
+
+const trpcClient = trpc.createClient({
+  url: "http://localhost:8081/trpc",
+  fetch: (url, options) => {
+    return fetch(url, {
+      ...options,
+      credentials: "include",
+    });
+  },
+});
+const queryClient = new QueryClient();
 
 const defineLazyReactMicroFrontend = (
   customElementName: string,
@@ -10,7 +23,11 @@ const defineLazyReactMicroFrontend = (
   defineReactMicroFrontend(
     customElementName,
     (_, element) => (
-      <RootProvider container={element.dynamicRoot}>
+      <RootProvider
+        container={element.dynamicRoot}
+        trpcClient={trpcClient}
+        queryClient={queryClient}
+      >
         <Root />
       </RootProvider>
     ),

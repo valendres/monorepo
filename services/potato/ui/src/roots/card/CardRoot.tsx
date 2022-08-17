@@ -4,6 +4,6 @@ import { Welcome } from "~containers/welcome";
 
 export const CardRoot: FC = () => (
   <Card headingText="Welcome" headingLevel="h2">
-    <Welcome />
+    <Welcome name="Potato" />
   </Card>
 );

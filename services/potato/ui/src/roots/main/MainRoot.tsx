@@ -9,7 +9,7 @@ export const MainRoot: FC = () => (
     <header css={styles.header}>
       <img css={styles.logo} src={logo} alt="logo" />
       <h3>
-        <Welcome />
+        <Welcome name="Eggplant" />
       </h3>
     </header>
   </div>

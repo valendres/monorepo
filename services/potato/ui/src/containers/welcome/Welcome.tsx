@@ -1,8 +1,12 @@
 import { trpc } from "~utils/trpc";
 import { FC } from "react";
 
-export const Welcome: FC = () => {
-  const greeting = trpc.proxy.user.greeting.useQuery({ name: "Potato" });
+export type WelcomeProps = {
+  name: string;
+};
+
+export const Welcome: FC<WelcomeProps> = ({ name }) => {
+  const greeting = trpc.proxy.user.greeting.useQuery({ name });
 
   if (!greeting.data) {
     return <div>Loading...</div>;
