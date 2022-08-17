@@ -1,5 +1,5 @@
 import { FC } from "react";
-import { Card } from "~components/card";
+import { Card } from "@valendres/react-components";
 
 export const CardRoot: FC = () => (
   <Card headingText="Example title" headingLevel="h2">

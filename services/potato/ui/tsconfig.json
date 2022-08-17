@@ -17,5 +17,8 @@
       "~utils/*": ["src/utils/*"]
     }
   },
-  "references": [{ "path": "../../../packages/react-micro-frontend" }]
+  "references": [
+    { "path": "../../../packages/react-components" },
+    { "path": "../../../packages/react-micro-frontend" }
+  ]
 }
