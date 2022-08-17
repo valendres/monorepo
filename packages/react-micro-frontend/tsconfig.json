@@ -4,6 +4,7 @@
     "target": "ES5",
     "baseUrl": "./",
     "composite": true,
+    "strictNullChecks": true,
     "rootDir": "src",
     "outDir": "./dist"
   },

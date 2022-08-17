@@ -1,0 +1,11 @@
+rules:
+  import/no-unresolved: off
+  import/prefer-default-export: off
+  import/extensions:
+    - error
+    - ignorePackages
+    - pattern:
+        js: never
+        jsx: never
+        ts: never
+        tsx: never

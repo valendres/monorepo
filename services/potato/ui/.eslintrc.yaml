@@ -2,3 +2,5 @@ extends:
   - "@valendres/eslint-config"
 parserOptions:
   project: "./tsconfig.json"
+rules:
+  import/extensions: off # not compatible with aliases

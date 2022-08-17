@@ -1,11 +1,11 @@
+/* eslint-disable import/no-extraneous-dependencies */
 import { defineConfig } from "vite";
 import react from "@vitejs/plugin-react";
 
-import tsconfig from "./tsconfig.json";
 import { resolve } from "path";
+import tsconfig from "./tsconfig.json";
 
 export const packagePath = (relativePath = ""): string =>
-  // eslint-disable-next-line unicorn/prefer-module -- webpack does not support esm configuration
   resolve(__dirname, "./", relativePath);
 
 const convertTsConfigPathsToViteAliases = (
@@ -18,8 +18,6 @@ const convertTsConfigPathsToViteAliases = (
     }),
     {},
   );
-
-console.log(convertTsConfigPathsToViteAliases(tsconfig.compilerOptions.paths));
 
 export default defineConfig({
   server: {

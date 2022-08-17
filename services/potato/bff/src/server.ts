@@ -24,5 +24,6 @@ app.use(
 );
 
 app.listen(PORT, () => {
+  // eslint-disable-next-line no-console -- only used in local dev
   console.log(`App listening on port: ${PORT}`);
 });

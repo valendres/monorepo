@@ -1,3 +1,4 @@
+// eslint-disable-next-line import/no-extraneous-dependencies -- this is an optional peer dependency
 import { createRoot, Root } from "react-dom/client";
 
 import { loadFont, Font } from "./utils/font";
@@ -11,7 +12,9 @@ export type ReactMicroFrontendConfig = {
 
 export class ReactMicroFrontend extends HTMLElement {
   public isInitialised = false;
+
   public config?: ReactMicroFrontendConfig;
+
   public reactRoot: Root;
 
   /** Returns the shadow root if defined, otherwise returns a reference to the element. */
@@ -34,7 +37,7 @@ export class ReactMicroFrontend extends HTMLElement {
     this.isInitialised = true;
 
     // Initialise shadow DOM
-    if (this.config.shadow) {
+    if (this.config?.shadow) {
       this.attachShadow({ mode: "open" });
     }
 

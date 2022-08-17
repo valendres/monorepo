@@ -11,6 +11,7 @@ importers:
       '@typescript-eslint/parser': ^5.33.1
       eslint: ^8.22.0
       eslint-config-airbnb: ^19.0.4
+      eslint-config-airbnb-typescript: ^17.0.0
       eslint-config-prettier: ^8.5.0
       eslint-plugin-import: ^2.26.0
       eslint-plugin-jsx-a11y: ^6.6.1
@@ -24,6 +25,7 @@ importers:
       '@typescript-eslint/eslint-plugin': 5.33.1_vsoshirnpb7xw6mr7xomgfas2i
       '@typescript-eslint/parser': 5.33.1_4rv7y5c6xz3vfxwhbrcxxi73bq
       eslint-config-airbnb: 19.0.4_p6gmk62mkdgf6va7ebrkix347q
+      eslint-config-airbnb-typescript: 17.0.0_ndwsrvi3totxze7jnjj3sukeeq
       eslint-config-prettier: 8.5.0_eslint@8.22.0
       eslint-plugin-import: 2.26.0_3bh5nkk7utn7e74vrwtv6rxmt4
       eslint-plugin-jsx-a11y: 6.6.1_eslint@8.22.0
@@ -51,6 +53,7 @@ importers:
       '@valendres/eslint-config': workspace:*
       '@valendres/prettier-config': workspace:*
       eslint: ^8.22.0
+      npm-run-all: ^4.1.5
       prettier: ^2.7.1
       react: ^18.2.0
       react-dom: ^18.2.0
@@ -63,6 +66,7 @@ importers:
       '@valendres/eslint-config': link:../../configs/eslint-config
       '@valendres/prettier-config': link:../../configs/pretter-config
       eslint: 8.22.0
+      npm-run-all: 4.1.5
       prettier: 2.7.1
       react: 18.2.0
       react-dom: 18.2.0_react@18.2.0
@@ -75,6 +79,7 @@ importers:
       '@valendres/eslint-config': workspace:*
       '@valendres/prettier-config': workspace:*
       eslint: ^8.22.0
+      npm-run-all: ^4.1.5
       prettier: ^2.7.1
       react: ^18.2.0
       react-dom: ^18.2.0
@@ -88,6 +93,7 @@ importers:
       '@valendres/eslint-config': link:../../configs/eslint-config
       '@valendres/prettier-config': link:../../configs/pretter-config
       eslint: 8.22.0
+      npm-run-all: 4.1.5
       prettier: 2.7.1
       typescript: 4.7.4
 
@@ -103,6 +109,7 @@ importers:
       cors: ^2.8.5
       eslint: ^8.22.0
       express: ^4.18.1
+      npm-run-all: ^4.1.5
       prettier: ^2.7.1
       ts-node-dev: ^2.0.0
       typescript: ^4.7.4
@@ -122,6 +129,7 @@ importers:
       '@valendres/eslint-config': link:../../../configs/eslint-config
       '@valendres/prettier-config': link:../../../configs/pretter-config
       eslint: 8.22.0
+      npm-run-all: 4.1.5
       prettier: 2.7.1
       ts-node-dev: 2.0.0_lep773egrlwq7kh77ngus6artu
       typescript: 4.7.4
@@ -1703,6 +1711,21 @@ packages:
       object.assign: 4.1.4
       object.entries: 1.1.5
       semver: 6.3.0
+    dev: false
+
+  /eslint-config-airbnb-typescript/17.0.0_ndwsrvi3totxze7jnjj3sukeeq:
+    resolution: {integrity: sha512-elNiuzD0kPAPTXjFWg+lE24nMdHMtuxgYoD30OyMD6yrW1AhFZPAg27VX7d3tzOErw+dgJTNWfRSDqEcXb4V0g==}
+    peerDependencies:
+      '@typescript-eslint/eslint-plugin': ^5.13.0
+      '@typescript-eslint/parser': ^5.0.0
+      eslint: ^7.32.0 || ^8.2.0
+      eslint-plugin-import: ^2.25.3
+    dependencies:
+      '@typescript-eslint/eslint-plugin': 5.33.1_vsoshirnpb7xw6mr7xomgfas2i
+      '@typescript-eslint/parser': 5.33.1_4rv7y5c6xz3vfxwhbrcxxi73bq
+      eslint: 8.22.0
+      eslint-config-airbnb-base: 15.0.0_2iahngt3u2tkbdlu6s4gkur3pu
+      eslint-plugin-import: 2.26.0_3bh5nkk7utn7e74vrwtv6rxmt4
     dev: false
 
   /eslint-config-airbnb/19.0.4_p6gmk62mkdgf6va7ebrkix347q:

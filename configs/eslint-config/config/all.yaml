@@ -1,4 +1,6 @@
 extends:
+  - ./import.yaml
   - ./monorepo.yaml
   - ./prettier.yaml
+  - ./react.yaml
   - ./typescript.yaml
