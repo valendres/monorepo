@@ -1,3 +1,10 @@
 import { FC } from "react";
+import { Card } from "~components/card";
 
-export const CardRoot: FC = () => <span>Card</span>;
+export const CardRoot: FC = () => (
+  <Card headingText="Example title" headingLevel="h2">
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean in ex
+    finibus, scelerisque orci et, convallis lorem. Ut ut molestie dui, a
+    convallis neque.
+  </Card>
+);

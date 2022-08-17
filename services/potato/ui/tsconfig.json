@@ -11,6 +11,7 @@
     "allowSyntheticDefaultImports": true,
     "resolveJsonModule": true,
     "paths": {
+      "~components/*": ["src/components/*"],
       "~containers/*": ["src/containers/*"],
       "~roots/*": ["src/roots/*"],
       "~utils/*": ["src/utils/*"]

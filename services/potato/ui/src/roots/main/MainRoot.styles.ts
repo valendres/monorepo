@@ -9,6 +9,7 @@ export const spin = css({});
 
 export const app = css({
   textAlign: "center",
+  color: "#fff",
 });
 
 export const logo = css({
