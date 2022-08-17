@@ -1,11 +1,6 @@
 {
   "name": "@valendres/potato-ui",
   "version": "1.0.0",
-  "eslintConfig": {
-    "extends": [
-      "react-app"
-    ]
-  },
   "scripts": {
     "build": "vite build",
     "format": "prettier --cache",

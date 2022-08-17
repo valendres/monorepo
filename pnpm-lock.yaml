@@ -2,6 +2,9 @@ lockfileVersion: 5.4
 
 importers:
 
+  .:
+    specifiers: {}
+
   configs/eslint-config:
     specifiers:
       '@typescript-eslint/eslint-plugin': ^5.33.1
@@ -45,7 +48,9 @@ importers:
       '@emotion/react': ^11.10.0
       '@types/react': ^18.0.15
       '@types/react-dom': ^18.0.6
+      '@valendres/eslint-config': workspace:*
       '@valendres/prettier-config': workspace:*
+      eslint: ^8.22.0
       prettier: ^2.7.1
       react: ^18.2.0
       react-dom: ^18.2.0
@@ -55,7 +60,9 @@ importers:
       '@emotion/react': 11.10.0_msmmgljd7hl2w2irtggflhmema
       '@types/react': 18.0.17
       '@types/react-dom': 18.0.6
+      '@valendres/eslint-config': link:../../configs/eslint-config
       '@valendres/prettier-config': link:../../configs/pretter-config
+      eslint: 8.22.0
       prettier: 2.7.1
       react: 18.2.0
       react-dom: 18.2.0_react@18.2.0
@@ -65,7 +72,9 @@ importers:
     specifiers:
       '@types/react': ^18.0.15
       '@types/react-dom': ^18.0.6
+      '@valendres/eslint-config': workspace:*
       '@valendres/prettier-config': workspace:*
+      eslint: ^8.22.0
       prettier: ^2.7.1
       react: ^18.2.0
       react-dom: ^18.2.0
@@ -76,7 +85,9 @@ importers:
     devDependencies:
       '@types/react': 18.0.17
       '@types/react-dom': 18.0.6
+      '@valendres/eslint-config': link:../../configs/eslint-config
       '@valendres/prettier-config': link:../../configs/pretter-config
+      eslint: 8.22.0
       prettier: 2.7.1
       typescript: 4.7.4
 
@@ -87,8 +98,10 @@ importers:
       '@types/express': ^4.17.13
       '@types/node': ^18.7.1
       '@types/ws': ^8.5.3
+      '@valendres/eslint-config': workspace:*
       '@valendres/prettier-config': workspace:*
       cors: ^2.8.5
+      eslint: ^8.22.0
       express: ^4.18.1
       prettier: ^2.7.1
       ts-node-dev: ^2.0.0
@@ -106,7 +119,9 @@ importers:
       '@types/express': 4.17.13
       '@types/node': 18.7.1
       '@types/ws': 8.5.3
+      '@valendres/eslint-config': link:../../../configs/eslint-config
       '@valendres/prettier-config': link:../../../configs/pretter-config
+      eslint: 8.22.0
       prettier: 2.7.1
       ts-node-dev: 2.0.0_lep773egrlwq7kh77ngus6artu
       typescript: 4.7.4

@@ -10,7 +10,12 @@
     "format:all:write": "yarn format:all --write",
     "format:diff": "pretty-quick",
     "format:diff:check": "yarn format:diff --check",
-    "format:diff:write": "yarn format:diff"
+    "format:diff:write": "yarn format:diff",
+    "lint": "run-s lint:es",
+    "lint:all": "run-s 'lint:*:all'",
+    "lint:diff": "run-s 'lint:*:diff'",
+    "lint:es": "eslint --cache --cache-strategy=content",
+    "lint:es:all": "yarn lint:es \"**/*\""
   },
   "dependencies": {},
   "peerDependencies": {
@@ -23,7 +28,9 @@
     "@emotion/react": "^11.10.0",
     "@types/react": "^18.0.15",
     "@types/react-dom": "^18.0.6",
+    "@valendres/eslint-config": "workspace:*",
     "@valendres/prettier-config": "workspace:*",
+    "eslint": "^8.22.0",
     "prettier": "^2.7.1",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",

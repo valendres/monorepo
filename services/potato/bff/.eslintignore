@@ -1,0 +1,7 @@
+dist/
+public/
+*.html
+*.json
+*.scss
+*.svg
+*.yaml
