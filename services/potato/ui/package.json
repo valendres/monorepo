@@ -8,6 +8,11 @@
   },
   "scripts": {
     "build": "vite build",
+    "lint": "run-s lint:es",
+    "lint:all": "run-s 'lint:*:all'",
+    "lint:diff": "run-s 'lint:*:diff'",
+    "lint:es": "eslint --cache --cache-strategy=content",
+    "lint:es:all": "yarn lint:es \"**/*\"",
     "start": "vite"
   },
   "dependencies": {
@@ -18,8 +23,8 @@
     "@trpc/client": "10.0.0-alpha.45",
     "@trpc/react": "10.0.0-alpha.45",
     "@trpc/server": "10.0.0-alpha.45",
-    "@valendres/react-components": "workspace:^",
-    "@valendres/react-micro-frontend": "workspace:^",
+    "@valendres/react-components": "workspace:*",
+    "@valendres/react-micro-frontend": "workspace:*",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "web-vitals": "^2.1.4"
@@ -29,8 +34,11 @@
     "@emotion/babel-plugin": "^11.10.0",
     "@types/react": "^18.0.15",
     "@types/react-dom": "^18.0.6",
-    "@valendres/potato-bff": "workspace:^",
+    "@valendres/eslint-config": "workspace:*",
+    "@valendres/potato-bff": "workspace:*",
     "@vitejs/plugin-react": "^2.0.0",
+    "eslint": "^8.22.0",
+    "npm-run-all": "^4.1.5",
     "react-refresh": "^0.10.0",
     "sass": "^1.54.4",
     "typescript": "^4.7.4",

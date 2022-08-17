@@ -1,0 +1,39 @@
+{
+  "name": "@valendres/eslint-config",
+  "version": "1.0.0",
+  "private": true,
+  "description": "> TODO: description",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/valendres/monorepo.git",
+    "directory": "configs/eslint-config"
+  },
+  "main": "index.js",
+  "files": [
+    "**/*.yaml",
+    "index.js"
+  ],
+  "peerDependencies": {
+    "eslint": ">=8.0.0"
+  },
+  "peerDependenciesMeta": {
+    "typescript": {
+      "optional": true
+    }
+  },
+  "dependencies": {
+    "@typescript-eslint/eslint-plugin": "^5.33.1",
+    "@typescript-eslint/parser": "^5.33.1",
+    "eslint-config-airbnb": "^19.0.4",
+    "eslint-plugin-import": "^2.26.0",
+    "eslint-plugin-jsx-a11y": "^6.6.1",
+    "eslint-plugin-monorepo": "^0.3.2",
+    "eslint-plugin-react": "^7.30.1",
+    "eslint-plugin-react-hooks": "^4.6.0"
+  },
+  "devDependencies": {
+    "eslint": "^8.22.0",
+    "typescript": "^4.7.4"
+  }
+}
