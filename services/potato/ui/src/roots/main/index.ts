@@ -1,2 +1,2 @@
-import { Main } from "./Main";
-export default Main;
+import { MainRoot } from "./MainRoot";
+export default MainRoot;

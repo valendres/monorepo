@@ -2,9 +2,9 @@ import { FC } from "react";
 import { Welcome } from "~containers/welcome";
 
 import logo from "./logo.svg";
-import * as styles from "./Main.styles";
+import * as styles from "./MainRoot.styles";
 
-export const Main: FC = () => (
+export const MainRoot: FC = () => (
   <div css={styles.app}>
     <header css={styles.header}>
       <img css={styles.logo} src={logo} alt="logo" />

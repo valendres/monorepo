@@ -1,2 +1,2 @@
-import { Card } from "./Card";
-export default Card;
+import { CardRoot } from "./CardRoot";
+export default CardRoot;
