@@ -20,8 +20,7 @@
     "format:all:write": "yarn format:all --write",
     "format:diff": "pretty-quick",
     "format:diff:check": "yarn format:diff --check",
-    "format:diff:write": "yarn format:diff",
-    "precommit": "lint-staged"
+    "format:diff:write": "yarn format:diff"
   },
   "peerDependencies": {
     "prettier": "^2.0.0"

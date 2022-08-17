@@ -2,6 +2,7 @@
   "name": "@valendres/monorepo-root",
   "private": true,
   "scripts": {
+    "precommit": "pnpm run --recursive --if-present precommit",
     "run-all": "pnpm run --recursive --parallel --if-present"
   }
 }
