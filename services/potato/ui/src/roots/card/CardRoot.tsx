@@ -1,10 +1,9 @@
 import { FC } from "react";
 import { Card } from "@valendres/react-components";
+import { Welcome } from "~containers/welcome";
 
 export const CardRoot: FC = () => (
-  <Card headingText="Example title" headingLevel="h2">
-    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean in ex
-    finibus, scelerisque orci et, convallis lorem. Ut ut molestie dui, a
-    convallis neque.
+  <Card headingText="Welcome" headingLevel="h2">
+    <Welcome />
   </Card>
 );
