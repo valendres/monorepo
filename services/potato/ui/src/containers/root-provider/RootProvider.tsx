@@ -24,7 +24,7 @@ export const RootProvider: FC<RootProviderProps> = ({
         key: "app",
         container,
       }),
-    [container]
+    [container],
   );
   return (
     <StrictMode>

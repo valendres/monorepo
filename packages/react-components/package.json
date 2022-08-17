@@ -3,7 +3,14 @@
   "main": "src/index.ts",
   "version": "1.0.0",
   "scripts": {
-    "build": "tsc"
+    "build": "tsc",
+    "format": "prettier --cache",
+    "format:all": "yarn format .",
+    "format:all:check": "yarn format:all --check",
+    "format:all:write": "yarn format:all --write",
+    "format:diff": "pretty-quick",
+    "format:diff:check": "yarn format:diff --check",
+    "format:diff:write": "yarn format:diff"
   },
   "dependencies": {},
   "peerDependencies": {
@@ -16,6 +23,8 @@
     "@emotion/react": "^11.10.0",
     "@types/react": "^18.0.15",
     "@types/react-dom": "^18.0.6",
+    "@valendres/prettier-config": "workspace:*",
+    "prettier": "^2.7.1",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "typescript": "^4.7.4"

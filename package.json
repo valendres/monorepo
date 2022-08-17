@@ -1,0 +1,7 @@
+{
+  "name": "@valendres/monorepo-root",
+  "private": true,
+  "scripts": {
+    "run-all": "pnpm run --recursive --parallel --if-present"
+  }
+}

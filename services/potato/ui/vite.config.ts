@@ -9,14 +9,14 @@ export const packagePath = (relativePath = ""): string =>
   resolve(__dirname, "./", relativePath);
 
 const convertTsConfigPathsToViteAliases = (
-  paths: Record<string, string[]>
+  paths: Record<string, string[]>,
 ): Record<string, string> =>
   Object.entries(paths).reduce(
     (accumulator, [key, path]) => ({
       ...accumulator,
       [key.replace("/*", "")]: packagePath(path[0].replace("/*", "")),
     }),
-    {}
+    {},
   );
 
 console.log(convertTsConfigPathsToViteAliases(tsconfig.compilerOptions.paths));

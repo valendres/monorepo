@@ -10,7 +10,7 @@ const userRouter = t.router({
     .input(
       z.object({
         name: z.string(),
-      })
+      }),
     )
     .query(({ input }) => `Hello, ${input.name}!`),
 });
@@ -21,7 +21,7 @@ const messageRouter = t.router({
       z.object({
         title: z.string(),
         text: z.string(),
-      })
+      }),
     )
     .mutation(({ input }) => {
       // imagine db call here

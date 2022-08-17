@@ -7,18 +7,17 @@ import styles from "./styles.scss";
 
 const trpcClient = trpc.createClient({
   url: "http://localhost:8081/trpc",
-  fetch: (url, options) => {
-    return fetch(url, {
+  fetch: (url, options) =>
+    fetch(url, {
       ...options,
       credentials: "include",
-    });
-  },
+    }),
 });
 const queryClient = new QueryClient();
 
 const defineLazyReactMicroFrontend = (
   customElementName: string,
-  Root: LazyExoticComponent<any>
+  Root: LazyExoticComponent<any>,
 ) => {
   defineReactMicroFrontend(
     customElementName,
@@ -49,16 +48,16 @@ const defineLazyReactMicroFrontend = (
           href: "https://fonts.googleapis.com/css2?family=Roboto&display=swap",
         },
       ],
-    }
+    },
   );
 };
 
 defineLazyReactMicroFrontend(
   "potato-main",
-  lazy(() => import("~roots/main"))
+  lazy(() => import("~roots/main")),
 );
 
 defineLazyReactMicroFrontend(
   "potato-card",
-  lazy(() => import("~roots/card"))
+  lazy(() => import("~roots/card")),
 );

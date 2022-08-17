@@ -20,7 +20,7 @@ app.use(
   createExpressMiddleware({
     router,
     createContext,
-  })
+  }),
 );
 
 app.listen(PORT, () => {

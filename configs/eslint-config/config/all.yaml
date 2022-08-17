@@ -1,3 +1,4 @@
 extends:
   - ./monorepo.yaml
+  - ./prettier.yaml
   - ./typescript.yaml

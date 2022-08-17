@@ -3,7 +3,7 @@ import { CreateHTTPContextOptions } from "@trpc/server/adapters/standalone";
 import { CreateWSSContextFnOptions } from "@trpc/server/adapters/ws";
 
 export const createContext = (
-  opts: CreateHTTPContextOptions | CreateWSSContextFnOptions
+  opts: CreateHTTPContextOptions | CreateWSSContextFnOptions,
 ) => {
   return {};
 };
