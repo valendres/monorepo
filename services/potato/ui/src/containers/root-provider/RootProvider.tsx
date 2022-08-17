@@ -1,14 +1,15 @@
-import logo from "./logo.svg";
-import * as styles from "./App.styles";
 import createEmotionCache from "@emotion/cache";
 import { CacheProvider as EmotionCacheProvider } from "@emotion/react";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
-import { FC, useMemo } from "react";
+import { FC, ReactNode, useMemo, StrictMode } from "react";
 import { trpc } from "~utils/trpc";
 
-import { Welcome } from "./containers/welcome";
+export type RootProviderProps = { container: Node; children: ReactNode };
 
-export const App: FC<{ container: Node }> = ({ container }) => {
+export const RootProvider: FC<RootProviderProps> = ({
+  container,
+  children,
+}) => {
   const emotionCache = useMemo(
     () =>
       createEmotionCache({
@@ -32,19 +33,14 @@ export const App: FC<{ container: Node }> = ({ container }) => {
     []
   );
   return (
-    <EmotionCacheProvider value={emotionCache}>
-      <trpc.Provider client={trpcClient} queryClient={queryClient}>
-        <QueryClientProvider client={queryClient}>
-          <div css={styles.app}>
-            <header css={styles.header}>
-              <img css={styles.logo} src={logo} alt="logo" />
-              <h3>
-                <Welcome />
-              </h3>
-            </header>
-          </div>
-        </QueryClientProvider>
-      </trpc.Provider>
-    </EmotionCacheProvider>
+    <StrictMode>
+      <EmotionCacheProvider value={emotionCache}>
+        <trpc.Provider client={trpcClient} queryClient={queryClient}>
+          <QueryClientProvider client={queryClient}>
+            {children}
+          </QueryClientProvider>
+        </trpc.Provider>
+      </EmotionCacheProvider>
+    </StrictMode>
   );
 };

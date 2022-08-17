@@ -8,7 +8,11 @@
     "module": "esnext",
     "target": "es6",
     "allowJs": true,
+    "allowSyntheticDefaultImports": true,
+    "resolveJsonModule": true,
     "paths": {
+      "~containers/*": ["src/containers/*"],
+      "~roots/*": ["src/roots/*"],
       "~utils/*": ["src/utils/*"]
     }
   },
