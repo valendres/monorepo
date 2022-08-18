@@ -49,6 +49,7 @@ export class ReactMicroFrontend extends HTMLElement {
 
     // Create react root
     const element = document.createElement("div");
+    element.id = "root";
     this.reactRoot = createRoot(element);
     this.dynamicRoot.appendChild(element);
 
