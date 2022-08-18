@@ -4,5 +4,8 @@
   "scripts": {
     "precommit": "pnpm run --recursive --if-present precommit",
     "run-all": "pnpm run --recursive --parallel --if-present"
+  },
+  "devDependencies": {
+    "husky": "^8.0.1"
   }
 }
