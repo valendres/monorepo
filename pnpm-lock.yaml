@@ -58,6 +58,7 @@ importers:
       prettier: ^2.7.1
       react: ^18.2.0
       react-dom: ^18.2.0
+      rimraf: ^3.0.2
       typescript: ^4.7.4
     devDependencies:
       '@babel/core': 7.18.10
@@ -72,6 +73,7 @@ importers:
       prettier: 2.7.1
       react: 18.2.0
       react-dom: 18.2.0_react@18.2.0
+      rimraf: 3.0.2
       typescript: 4.7.4
 
   packages/react-micro-frontend:
@@ -86,6 +88,7 @@ importers:
       prettier: ^2.7.1
       react: ^18.2.0
       react-dom: ^18.2.0
+      rimraf: ^3.0.2
       typescript: ^4.7.4
     optionalDependencies:
       react: 18.2.0
@@ -99,6 +102,7 @@ importers:
       lint-staged: 13.0.3
       npm-run-all: 4.1.5
       prettier: 2.7.1
+      rimraf: 3.0.2
       typescript: 4.7.4
 
   services/potato/bff:
@@ -116,6 +120,7 @@ importers:
       lint-staged: ^13.0.3
       npm-run-all: ^4.1.5
       prettier: ^2.7.1
+      rimraf: ^3.0.2
       ts-node-dev: ^2.0.0
       typescript: ^4.7.4
       ws: ^8.8.1
@@ -137,6 +142,7 @@ importers:
       lint-staged: 13.0.3
       npm-run-all: 4.1.5
       prettier: 2.7.1
+      rimraf: 3.0.2
       ts-node-dev: 2.0.0_lep773egrlwq7kh77ngus6artu
       typescript: 4.7.4
 
@@ -166,6 +172,7 @@ importers:
       react: ^18.2.0
       react-dom: ^18.2.0
       react-refresh: ^0.10.0
+      rimraf: ^3.0.2
       sass: ^1.54.4
       typescript: ^4.7.4
       vite: ^3.0.0
@@ -197,6 +204,7 @@ importers:
       npm-run-all: 4.1.5
       prettier: 2.7.1
       react-refresh: 0.10.0
+      rimraf: 3.0.2
       sass: 1.54.4
       typescript: 4.7.4
       vite: 3.0.5_sass@1.54.4

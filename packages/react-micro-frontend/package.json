@@ -3,7 +3,9 @@
   "main": "src/index.ts",
   "version": "1.0.0",
   "scripts": {
-    "build": "tsc",
+    "build": "run-s clean compile",
+    "clean": "rimraf ./dist",
+    "compile": "tsc",
     "format": "prettier --cache",
     "format:all": "yarn format .",
     "format:all:check": "yarn format:all --check",
@@ -18,7 +20,6 @@
     "lint:es:all": "yarn lint:es \"**/*\"",
     "precommit": "lint-staged"
   },
-  "dependencies": {},
   "optionalDependencies": {
     "react": "^18.2.0",
     "react-dom": "^18.2.0"
@@ -34,6 +35,7 @@
     "prettier": "^2.7.1",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
+    "rimraf": "^3.0.2",
     "typescript": "^4.7.4"
   }
 }
