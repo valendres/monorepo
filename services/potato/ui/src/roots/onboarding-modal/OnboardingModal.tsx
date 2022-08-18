@@ -9,9 +9,9 @@ import {
 } from "@mui/material";
 import { FC, useState } from "react";
 
-export type OnboardingModalRootProps = {};
+export type OnboardingModalProps = {};
 
-export const OnboardingModalRoot: FC<OnboardingModalRootProps> = () => {
+export const OnboardingModal: FC<OnboardingModalProps> = () => {
   const [showModal, setShowModal] = useState<boolean>(true);
   return (
     <Dialog

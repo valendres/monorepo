@@ -58,8 +58,8 @@ defineLazyReactMicroFrontend(
 );
 
 defineLazyReactMicroFrontend(
-  "potato-card",
-  lazy(() => import("~roots/card")),
+  "potato-summary-card",
+  lazy(() => import("~roots/summary-card")),
 );
 
 defineLazyReactMicroFrontend(

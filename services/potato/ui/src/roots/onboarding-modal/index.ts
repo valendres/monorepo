@@ -1,3 +1,3 @@
-import { OnboardingModalRoot } from "./OnboardingModalRoot";
+import { OnboardingModal } from "./OnboardingModal";
 
-export default OnboardingModalRoot;
+export default OnboardingModal;

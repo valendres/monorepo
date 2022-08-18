@@ -1,3 +1,3 @@
-import { MainRoot } from "./MainRoot";
+import { Main } from "./Main";
 
-export default MainRoot;
+export default Main;
