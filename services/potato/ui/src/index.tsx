@@ -63,6 +63,6 @@ defineLazyReactMicroFrontend(
 );
 
 defineLazyReactMicroFrontend(
-  "potato-onboarding-modal",
-  lazy(() => import("~roots/onboarding-modal")),
+  "potato-launch-button",
+  lazy(() => import("~roots/launch-button")),
 );

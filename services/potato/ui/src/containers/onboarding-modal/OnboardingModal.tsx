@@ -7,16 +7,21 @@ import {
   DialogTitle,
   Paper,
 } from "@mui/material";
-import { FC, useState } from "react";
+import { FC } from "react";
 
-export type OnboardingModalProps = {};
+export type OnboardingModalProps = {
+  open: boolean;
+  onClose: () => void;
+};
 
-export const OnboardingModal: FC<OnboardingModalProps> = () => {
-  const [showModal, setShowModal] = useState<boolean>(true);
+export const OnboardingModal: FC<OnboardingModalProps> = ({
+  open,
+  onClose,
+}) => {
   return (
     <Dialog
-      open={showModal}
-      onClose={() => setShowModal(false)}
+      open={open}
+      onClose={onClose}
       PaperComponent={Paper}
       aria-labelledby="confirmation-title"
     >
@@ -31,14 +36,10 @@ export const OnboardingModal: FC<OnboardingModalProps> = () => {
         </DialogContentText>
       </DialogContent>
       <DialogActions>
-        <Button variant="text" onClick={() => setShowModal(false)}>
+        <Button variant="text" onClick={onClose}>
           Cancel
         </Button>
-        <Button
-          variant="contained"
-          onClick={() => setShowModal(false)}
-          autoFocus
-        >
+        <Button variant="contained" onClick={onClose} autoFocus>
           Continue
         </Button>
       </DialogActions>
