@@ -18,6 +18,7 @@
       "~utils/*": ["src/utils/*"]
     }
   },
+  "exclude": ["./dist", "./public"],
   "references": [
     { "path": "../../../packages/react-components" },
     { "path": "../../../packages/react-micro-frontend" }
