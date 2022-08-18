@@ -9,7 +9,7 @@ const PORT = 8081;
 
 const app = express();
 
-app.use(cors({ origin: "http://localhost:8080", credentials: true }));
+app.use(cors({ origin: true, credentials: true }));
 
 app.use("/healthcheck", (_, res) => {
   res.json({ success: true });
