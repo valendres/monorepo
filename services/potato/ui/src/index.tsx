@@ -61,3 +61,8 @@ defineLazyReactMicroFrontend(
   "potato-card",
   lazy(() => import("~roots/card")),
 );
+
+defineLazyReactMicroFrontend(
+  "potato-onboarding-modal",
+  lazy(() => import("~roots/onboarding-modal")),
+);
