@@ -15,7 +15,9 @@ export const LaunchButton: FC = () => {
 
   return (
     <div>
-      <Button onClick={handleButtonClick}>Do something</Button>
+      <Button onClick={handleButtonClick}>
+        Do something that requires confirmation
+      </Button>
       <OnboardingModal open={modalOpen} onClose={handleModalClose} />
     </div>
   );

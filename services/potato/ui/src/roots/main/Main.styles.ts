@@ -16,15 +16,7 @@ export const logo = css({
   animation: `${rotate} infinite 20s linear`,
 });
 
-export const header = css({
-  backgroundColor: "#282c34",
-  minHeight: "100vh",
-  display: "flex",
-  flexDirection: "column",
-  alignItems: "center",
-  justifyContent: "center",
-  fontSize: "calc(10px + 2vmin)",
-});
+export const header = css({});
 
 export const link = css({
   color: "#61dafb",

@@ -13,6 +13,20 @@ const userRouter = t.router({
       }),
     )
     .query(({ input }) => `Hello, ${input.name}!`),
+  profile: t.procedure
+    .input(
+      z.object({
+        id: z.string(),
+      }),
+    )
+    .query(({ input }) => ({
+      id: input.id,
+      fullName: "Peter Weller",
+      firstName: "Peter",
+      lastName: "Weller",
+      tagLine: "Senior Software Engineer",
+      introduction: "Hi, my name is Pete and I am a 🥔",
+    })),
 });
 
 const messageRouter = t.router({
