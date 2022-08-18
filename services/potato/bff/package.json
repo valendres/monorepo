@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "main": "src/index.ts",
   "scripts": {
+    "build": "tsc",
     "format": "prettier --cache",
     "format:all": "yarn format .",
     "format:all:check": "yarn format:all --check",

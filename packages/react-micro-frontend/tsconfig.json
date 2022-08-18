@@ -5,8 +5,10 @@
     "baseUrl": "./",
     "composite": true,
     "strictNullChecks": true,
-    "rootDir": "src",
+    "declaration": true,
+    "rootDir": "./src",
     "outDir": "./dist"
   },
-  "include": ["src"]
+  "include": ["./src"],
+  "exclude": ["./dist"]
 }
