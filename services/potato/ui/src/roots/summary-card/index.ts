@@ -1,3 +1,3 @@
-import { SummaryCard } from "./SummaryCard";
+import { SummaryCard } from './SummaryCard';
 
 export default SummaryCard;

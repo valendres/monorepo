@@ -1,16 +1,16 @@
-import { defineReactMicroFrontend } from "@valendres/react-micro-frontend";
-import { lazy, LazyExoticComponent } from "react";
-import { QueryClient } from "@tanstack/react-query";
-import { RootProvider } from "~containers/root-provider";
-import { trpc } from "~utils/trpc";
-import styles from "./styles.scss";
+import { defineReactMicroFrontend } from '@valendres/react-micro-frontend';
+import { lazy, LazyExoticComponent } from 'react';
+import { QueryClient } from '@tanstack/react-query';
+import { RootProvider } from '~containers/root-provider';
+import { trpc } from '~utils/trpc';
+import styles from './styles.scss';
 
 const trpcClient = trpc.createClient({
-  url: "http://localhost:8081/trpc",
+  url: 'http://localhost:8081/trpc',
   fetch: (url, options) =>
     fetch(url, {
       ...options,
-      credentials: "include",
+      credentials: 'include',
     }),
 });
 const queryClient = new QueryClient();
@@ -35,17 +35,17 @@ const defineLazyReactMicroFrontend = (
       styles: [styles],
       fonts: [
         {
-          rel: "preconnect",
-          href: "https://fonts.googleapis.com",
+          rel: 'preconnect',
+          href: 'https://fonts.googleapis.com',
         },
         {
-          rel: "preconnect",
-          href: "https://fonts.gstatic.com",
-          crossOrigin: "anonymous",
+          rel: 'preconnect',
+          href: 'https://fonts.gstatic.com',
+          crossOrigin: 'anonymous',
         },
         {
-          rel: "stylesheet",
-          href: "https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap",
+          rel: 'stylesheet',
+          href: 'https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap',
         },
       ],
     },
@@ -53,16 +53,16 @@ const defineLazyReactMicroFrontend = (
 };
 
 defineLazyReactMicroFrontend(
-  "potato-main",
-  lazy(() => import("~roots/main")),
+  'potato-main',
+  lazy(() => import('~roots/main')),
 );
 
 defineLazyReactMicroFrontend(
-  "potato-summary-card",
-  lazy(() => import("~roots/summary-card")),
+  'potato-summary-card',
+  lazy(() => import('~roots/summary-card')),
 );
 
 defineLazyReactMicroFrontend(
-  "potato-launch-button",
-  lazy(() => import("~roots/launch-button")),
+  'potato-launch-button',
+  lazy(() => import('~roots/launch-button')),
 );

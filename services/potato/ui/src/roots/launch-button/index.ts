@@ -1,3 +1,3 @@
-import { LaunchButton } from "./LaunchButton";
+import { LaunchButton } from './LaunchButton';
 
 export default LaunchButton;

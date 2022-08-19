@@ -1,4 +1,4 @@
 extends:
-  - "@valendres/eslint-config"
+  - '@valendres/eslint-config'
 parserOptions:
-  project: "./tsconfig.json"
+  project: './tsconfig.json'

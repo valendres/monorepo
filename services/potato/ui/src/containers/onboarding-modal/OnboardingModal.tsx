@@ -6,8 +6,8 @@ import {
   DialogContentText,
   DialogTitle,
   Paper,
-} from "@mui/material";
-import { FC } from "react";
+} from '@mui/material';
+import { FC } from 'react';
 
 export type OnboardingModalProps = {
   open: boolean;

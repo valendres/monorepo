@@ -1,6 +1,6 @@
-import { Button } from "@mui/material";
-import { FC, useCallback, useState } from "react";
-import { OnboardingModal } from "~containers/onboarding-modal";
+import { Button } from '@mui/material';
+import { FC, useCallback, useState } from 'react';
+import { OnboardingModal } from '~containers/onboarding-modal';
 
 export const LaunchButton: FC = () => {
   const [modalOpen, setModalOpen] = useState<boolean>(false);

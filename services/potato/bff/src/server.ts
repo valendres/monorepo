@@ -1,9 +1,9 @@
-import { createExpressMiddleware } from "@trpc/server/adapters/express";
-import express from "express";
-import cors from "cors";
+import { createExpressMiddleware } from '@trpc/server/adapters/express';
+import express from 'express';
+import cors from 'cors';
 
-import { createContext } from "./context";
-import { router } from "./router";
+import { createContext } from './context';
+import { router } from './router';
 
 const PORT = 8081;
 
@@ -11,12 +11,12 @@ const app = express();
 
 app.use(cors({ origin: true, credentials: true }));
 
-app.use("/healthcheck", (_, res) => {
+app.use('/healthcheck', (_, res) => {
   res.json({ success: true });
 });
 
 app.use(
-  "/trpc",
+  '/trpc',
   createExpressMiddleware({
     router,
     createContext,

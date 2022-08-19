@@ -1,5 +1,5 @@
-import { FC } from "react";
-import { trpc } from "~utils/trpc";
+import { FC } from 'react';
+import { trpc } from '~utils/trpc';
 
 export type WelcomeProps = {
   name: string;

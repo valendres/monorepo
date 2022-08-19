@@ -1,12 +1,12 @@
 /* eslint-disable import/no-extraneous-dependencies */
-import { defineConfig } from "vite";
-import react from "@vitejs/plugin-react";
+import { defineConfig } from 'vite';
+import react from '@vitejs/plugin-react';
 
-import { resolve } from "path";
-import tsconfig from "./tsconfig.json";
+import { resolve } from 'path';
+import tsconfig from './tsconfig.json';
 
-export const packagePath = (relativePath = ""): string =>
-  resolve(__dirname, "./", relativePath);
+export const packagePath = (relativePath = ''): string =>
+  resolve(__dirname, './', relativePath);
 
 const convertTsConfigPathsToViteAliases = (
   paths: Record<string, string[]>,
@@ -14,7 +14,7 @@ const convertTsConfigPathsToViteAliases = (
   Object.entries(paths).reduce(
     (accumulator, [key, path]) => ({
       ...accumulator,
-      [key.replace("/*", "")]: packagePath(path[0].replace("/*", "")),
+      [key.replace('/*', '')]: packagePath(path[0].replace('/*', '')),
     }),
     {},
   );
@@ -28,9 +28,9 @@ export default defineConfig({
   },
   plugins: [
     react({
-      jsxImportSource: "@emotion/react",
+      jsxImportSource: '@emotion/react',
       babel: {
-        plugins: ["@emotion/babel-plugin"],
+        plugins: ['@emotion/babel-plugin'],
       },
     }),
   ],

@@ -1,10 +1,10 @@
-import type { ReactNode } from "react";
+import type { ReactNode } from 'react';
 
 import {
   ReactMicroFrontend,
   ReactMicroFrontendConfig,
-} from "./react-micro-frontend";
-import { loadFont } from "./utils/font";
+} from './react-micro-frontend';
+import { loadFont } from './utils/font';
 
 export const defineReactMicroFrontend = <TProps = {}>(
   tag: string,

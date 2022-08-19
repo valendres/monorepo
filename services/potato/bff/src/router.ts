@@ -1,7 +1,7 @@
-import { initTRPC } from "@trpc/server";
-import { z } from "zod";
+import { initTRPC } from '@trpc/server';
+import { z } from 'zod';
 
-import { Context } from "./context";
+import { Context } from './context';
 
 const t = initTRPC<{ ctx: Context }>()();
 
@@ -21,11 +21,11 @@ const userRouter = t.router({
     )
     .query(({ input }) => ({
       id: input.id,
-      fullName: "Peter Weller",
-      firstName: "Peter",
-      lastName: "Weller",
-      tagLine: "Senior Software Engineer",
-      introduction: "Hi, my name is Pete and I am a 🥔",
+      fullName: 'Peter Weller',
+      firstName: 'Peter',
+      lastName: 'Weller',
+      tagLine: 'Senior Software Engineer',
+      introduction: 'Hi, my name is Pete and I am a 🥔',
     })),
 });
 

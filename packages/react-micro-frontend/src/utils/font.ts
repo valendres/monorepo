@@ -1,8 +1,8 @@
 export type Font = {
-  rel: "preconnect" | "stylesheet";
+  rel: 'preconnect' | 'stylesheet';
   href: string;
   /** https://developer.mozilla.org/en-US/docs/Web/HTML/Attributes/crossorigin */
-  crossOrigin?: "anonymous" | "use-credentials";
+  crossOrigin?: 'anonymous' | 'use-credentials';
 };
 
 export const loadFont = ({ rel, href, crossOrigin }: Font) => {
@@ -11,12 +11,12 @@ export const loadFont = ({ rel, href, crossOrigin }: Font) => {
     return;
   }
 
-  const element = document.createElement("link");
+  const element = document.createElement('link');
   element.rel = rel;
   element.href = href;
-  element.dataset.injected = "true";
+  element.dataset.injected = 'true';
   if (crossOrigin) {
-    element.crossOrigin = "";
+    element.crossOrigin = '';
   }
   document.head.appendChild(element);
 };
